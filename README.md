@@ -4,6 +4,9 @@ Products Management is a web application for managing product data for SME in Th
 
 This project built on [Vite](https://vite.dev/), [React](https://react.dev/), [TypeScript](https://www.typescriptlang.org/)
 
+<img width="1910" height="858" alt="image" src="https://github.com/user-attachments/assets/63d91c5c-60ef-4e56-931b-d14cdd5306e6" />
+
+
 # Features
 - **Table of Products**
   - The user can filter products by category.
@@ -39,4 +42,5 @@ Run
 - Connect the frontend and backend with the database service.
 - Automation Test
 - Snapshot Test
-- Mock mode for running on local machine 
+- Mock mode for running on the local machine
+- New UI/UX design
