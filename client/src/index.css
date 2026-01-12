@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: "sans-serif";
+}
+
+#root {
+  width: 100%;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
