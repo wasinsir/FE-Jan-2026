@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-        "outDir": "dist",
+    "outDir": "dist",
     "module": "ESNext",
     "target": "ES6",
     "lib": ["es6", "esnext", "dom"],
@@ -13,9 +13,9 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "declaration": true,
+    "declaration": true
   },
-    "ts-node": {
+  "ts-node": {
     "esm": true,
     "experimentalSpecifierResolution": "node"
   },

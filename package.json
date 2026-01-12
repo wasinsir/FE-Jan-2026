@@ -5,15 +5,11 @@
   "workspaces": [
     "client",
     "server"
-  ]  ,
+  ],
   "scripts": {
     "dev": "concurrently \"npm --prefix server run dev\" \"npm --prefix client run dev\" --names \"server,client\" --prefix-colors \"bgBlue.bold,bgGreen.bold\"",
     "dev:server": "npm --prefix server run dev",
-    "dev:client": "npm --prefix client run dev",
-    "test": "npm run -r test",
-    "lint": "npm run -r lint",
-    "format": "npm run -r format",
-    "format:check": "npm run -r format:check"
+    "dev:client": "npm --prefix client run dev"
   },
   "devDependencies": {
     "concurrently": "^8.2.0"

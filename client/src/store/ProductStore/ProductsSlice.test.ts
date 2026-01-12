@@ -135,4 +135,3 @@ describe("Products Store", () => {
     vi.useRealTimers();
   });
 });
-
