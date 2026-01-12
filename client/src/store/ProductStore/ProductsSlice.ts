@@ -15,7 +15,8 @@ export const productsSlice = createSlice({
   reducers: {
     //Connect with API later
     add: (state, action: PayloadAction<Product>) => {
-      state.productList.push(action.payload);
+      const productsWithData = {...action.payload, id: (state.productList.length + 1).toString(), createdAt: new Date().toISOString()};
+      state.productList.push(productsWithData);
     },
     update: (state, action: PayloadAction<Product>) => {
       const newState = state.productList.map((product) =>

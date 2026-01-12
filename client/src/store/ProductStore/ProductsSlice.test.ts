@@ -1,4 +1,4 @@
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 import { add, update, updateFilter } from "./ProductsSlice";
 import {
   getFilteredProducts,
@@ -12,11 +12,16 @@ import { mockProducts } from "../../mocks/products";
 
 describe("Products Store", () => {
   describe("ProductsSlice Reducers", () => {
+    beforeEach(() => {
+      vi.useFakeTimers();
+      vi.setSystemTime(new Date("2024-01-03"));
+    });
+
     it("add action adds a new product", () => {
       const store = createMockStore([]);
 
       const newProduct: Product = {
-        id: "3",
+        id: "1",
         name: "New Product",
         sku: "SKU003",
         price: 75,
@@ -29,7 +34,11 @@ describe("Products Store", () => {
       const state = store.getState();
 
       expect(state.products.productList).toHaveLength(1);
-      expect(state.products.productList[0]).toEqual(newProduct);
+      expect(state.products.productList[0]).toEqual({
+        ...newProduct,
+        id: "1",
+        createdAt: "2024-01-03T00:00:00.000Z",
+      });
     });
 
     it("update action updates an existing product", () => {
@@ -121,4 +130,9 @@ describe("Products Store", () => {
       expect(filter).toBeUndefined();
     });
   });
+
+  afterEach(() => {
+    vi.useRealTimers();
+  });
 });
+
